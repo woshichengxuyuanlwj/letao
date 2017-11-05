@@ -1,5 +1,5 @@
 
-define(['jquery', '/utils'],function ($) {
+define(['jquery', './utils'], function ($) {
 
 
 })
