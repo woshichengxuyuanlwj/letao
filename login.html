@@ -33,39 +33,11 @@
         </div>
     </div>
     
-    <script src="/public/assets/jquery/jquery.min.js"></script>
-    <script src="/public/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/public/js/require.js"></script>
+    <script src="/public/js/config.js"></script>
     <script>
         
-           $('form').on('submit',function (){
-                  
-                  var _this = $(this);
-
-                  $.ajax ({
-                    // fdsf  fsdfsdf fsdf sd df
-
-              url:'/api/employee/employeeLogin',
-
-              type:'post',
-
-              data:_this.serialize(),
-
-              success:function(info) {
-
-                if(info.error) {
-
-                  return  alert(info.message);
-                  return 1231233221;
-
-                }
-
-                location.href = '/';
-
-              }
-
-           });
-           return false;
-     })
+     require(['src/login']);
     </script>
 </body>
 </html>
